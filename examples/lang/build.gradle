@@ -1,0 +1,30 @@
+plugins {
+    id 'application'
+}
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+
+dependencies {
+    implementation "io.github.qishr:cascara-common:1.1.4"
+    implementation "io.github.qishr:cascara-lang-json:0.4.0"
+    implementation "io.github.qishr:cascara-lang-xml:0.4.0"
+    implementation "io.github.qishr:cascara-lang-yaml:0.4.0"
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+
+// Dynamically resolve the main class from the command line flag '-Pmain=...'
+application {
+    def input = project.hasProperty('main') ? project.property('main') : 'yaml.SimpleAstParse'
+    mainClass = "io.github.qishr.cascara.docs.examples.${input}"
+}

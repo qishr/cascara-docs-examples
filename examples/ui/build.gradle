@@ -1,0 +1,46 @@
+plugins {
+    id 'application'
+    id("org.openjfx.javafxplugin") version "0.1.0"
+}
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation "io.github.qishr:cascara-common:1.1.4"
+    implementation "io.github.qishr:cascara-common-io:0.4.0"
+    implementation "io.github.qishr:cascara-lang-json:0.4.0"
+    implementation "io.github.qishr:cascara-lang-xml:0.4.0"
+    implementation "io.github.qishr:cascara-lang-yaml:0.4.0"
+    implementation "io.github.qishr:cascara-schema:0.4.0"
+    implementation "io.github.qishr:cascara-ui:0.4.0"
+}
+
+
+java {
+   sourceCompatibility = '25'
+}
+
+
+
+javafx {
+    version = "25"
+    modules = [ 'javafx.controls', 'javafx.graphics' ]
+}
+
+
+application {
+    mainClass.set("io.github.qishr.cascara.ui.demo.Launcher")
+    mainModule.set("cascara.ui.demo")
+}
+
+tasks.withType(JavaExec) {
+    jvmArgs = ['--enable-native-access=javafx.graphics']
+}
+
+tasks.withType(Javadoc).configureEach {
+    options.addStringOption('Xdoclint:-missing', '-quiet')
+}

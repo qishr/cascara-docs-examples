@@ -1,2 +1,1 @@
-# cascara-docs-examples
-Cascara Examples
+# Cascara Examples
