@@ -20,4 +20,5 @@ rootProject.name = 'cascara-docs-examples'
 
 include('examples:lang')
 include('examples:ui')
+include('examples:schema')
 

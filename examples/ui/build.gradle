@@ -9,6 +9,7 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
     implementation "io.github.qishr:cascara-common:1.1.4"
     implementation "io.github.qishr:cascara-common-io:0.4.0"
@@ -25,7 +26,6 @@ java {
 }
 
 
-
 javafx {
     version = "25"
     modules = [ 'javafx.controls', 'javafx.graphics' ]
@@ -33,14 +33,30 @@ javafx {
 
 
 application {
-    mainClass.set("io.github.qishr.cascara.ui.demo.Launcher")
-    mainModule.set("cascara.ui.demo")
+    mainClass.set("io.github.qishr.cascara.docs.examples.ui.Launcher")
+    mainModule.set("cascara.docs.examples.ui")
 }
+
 
 tasks.withType(JavaExec) {
     jvmArgs = ['--enable-native-access=javafx.graphics']
 }
 
+
 tasks.withType(Javadoc).configureEach {
     options.addStringOption('Xdoclint:-missing', '-quiet')
+}
+
+
+tasks.register('runtimeModulePath', Copy) { t ->
+    t.dependsOn project.tasks.named('jar')
+    t.from project.tasks.named('jar')
+    t.from project.configurations.runtimeClasspath
+    t.duplicatesStrategy = org.gradle.api.file.DuplicatesStrategy.EXCLUDE
+    t.into project.layout.buildDirectory.dir('modulepath')
+}
+
+
+project.tasks.named('jar') {
+    it.finalizedBy 'runtimeModulePath'
 }

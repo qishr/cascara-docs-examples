@@ -1,4 +1,4 @@
-module cascara.ui.demo {
+module cascara.docs.examples.ui {
     requires transitive cascara.common;
     requires transitive cascara.common.io;
     requires cascara.lang.json;
@@ -11,6 +11,6 @@ module cascara.ui.demo {
     requires transitive javafx.controls;
     requires javafx.graphics;
 
-    exports io.github.qishr.cascara.ui.demo to cascara.ui, javafx.base, javafx.graphics;
-    opens io.github.qishr.cascara.ui.demo to cascara.ui, cascara.schema, javafx.base;
+    exports io.github.qishr.cascara.docs.examples.ui to cascara.ui, javafx.base, javafx.graphics;
+    opens io.github.qishr.cascara.docs.examples.ui to cascara.ui, cascara.schema, javafx.base;
 }

@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "SimpleAstParse (factory)",
+            "request": "launch",
+            "mainClass": "cascara.docs.examples.lang/io.github.qishr.cascara.docs.examples.lang.factory.SimpleAstParse",
+            "projectName": "lang",
+            "modulePaths": ["${workspaceFolder}/examples/lang/build/modulepath"],
+            "classPaths": [],
+            "preLaunchTask": "gradle build examples"
+        },
+        {
+            "type": "java",
+            "name": "Schema Validation",
+            "request": "launch",
+            "mainClass": "cascara.docs.examples.schema/io.github.qishr.cascara.docs.examples.schema.ValidateWithCollector",
+            "projectName": "lang",
+            "modulePaths": ["${workspaceFolder}/examples/schema/build/modulepath"],
+            "classPaths": [],
+            "preLaunchTask": "gradle build examples"
+        },
+        {
+            "type": "java",
+            "name": "UI",
+            "request": "launch",
+            "mainClass": "cascara.docs.examples.ui/io.github.qishr.cascara.docs.examples.ui.Launcher",
+            "projectName": "lang",
+            "modulePaths": ["${workspaceFolder}/examples/ui/build/modulepath"],
+            "classPaths": [],
+            "preLaunchTask": "gradle build examples"
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+plugins {
+    id 'application'
+}
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+
+dependencies {
+    implementation "io.github.qishr:cascara-common:1.1.4"
+    implementation "io.github.qishr:cascara-common-io:0.4.0"
+    implementation "io.github.qishr:cascara-lang-json:0.4.0"
+    implementation "io.github.qishr:cascara-lang-xml:0.4.0"
+    implementation "io.github.qishr:cascara-lang-yaml:0.4.0"
+    implementation "io.github.qishr:cascara-schema:0.4.0"
+}
+
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+
+// Dynamically resolve the main class from the command line flag '-Pmain=...'
+application {
+    def input = project.hasProperty('main') ? project.property('main') : 'ValidateWithCollector'
+    mainClass = "io.github.qishr.cascara.docs.examples.schema.${input}"
+}
+
+
+tasks.withType(Javadoc).configureEach {
+    options.addStringOption('Xdoclint:-missing', '-quiet')
+}
+
+
+tasks.register('runtimeModulePath', Copy) { t ->
+    t.dependsOn project.tasks.named('jar')
+    t.from project.tasks.named('jar')
+    t.from project.configurations.runtimeClasspath
+    t.duplicatesStrategy = org.gradle.api.file.DuplicatesStrategy.EXCLUDE
+    t.into project.layout.buildDirectory.dir('modulepath')
+}
+
+
+project.tasks.named('jar') {
+    it.finalizedBy 'runtimeModulePath'
+}

@@ -1,0 +1,5 @@
+{
+    "$schema": "res:///io/github/qishr/cascara/docs/examples/schema/schema.json",
+    "name": "Dave",
+    "age": 31
+}
