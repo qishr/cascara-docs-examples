@@ -1,8 +1,8 @@
 package io.github.qishr.cascara.docs.examples.schema;
 
+import java.io.IOException;
 import java.io.InputStream;
 
-import io.github.qishr.cascara.common.diagnostic.LocalizableException;
 import io.github.qishr.cascara.common.io.IOUtils;
 import io.github.qishr.cascara.common.io.UriScheme;
 import io.github.qishr.cascara.common.io.provider.ResResourceProvider;
@@ -14,7 +14,7 @@ import io.github.qishr.cascara.schema.util.SchemaValidator;
 
 @Example
 public class ValidateWithException {
-    public static void main(String args[]) throws LocalizableException {
+    public static void main(String args[]) throws IOException {
         // Tell IOUtils to use this class when reading resources
         IOUtils.setResourceProvider(UriScheme.RES, new ResResourceProvider(AgnosticValidationExample.class));
 

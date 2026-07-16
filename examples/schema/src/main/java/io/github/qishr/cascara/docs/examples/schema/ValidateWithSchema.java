@@ -1,8 +1,8 @@
 package io.github.qishr.cascara.docs.examples.schema;
 
+import java.io.IOException;
 import java.io.InputStream;
 
-import io.github.qishr.cascara.common.diagnostic.LocalizableException;
 import io.github.qishr.cascara.common.lang.annotation.Example;
 import io.github.qishr.cascara.lang.json.ast.JsonNode;
 import io.github.qishr.cascara.lang.json.processor.JsonAstParser;
@@ -12,7 +12,7 @@ import io.github.qishr.cascara.schema.util.SchemaCompiler;
 
 @Example
 public class ValidateWithSchema {
-    public static void main(String args[]) throws LocalizableException {
+    public static void main(String args[]) throws IOException {
         // Load the schema from resources
         InputStream is = ValidateWithSchema.class.getResourceAsStream("schema.json");
         JsonNode schemaAst = new JsonAstParser().parse(is);

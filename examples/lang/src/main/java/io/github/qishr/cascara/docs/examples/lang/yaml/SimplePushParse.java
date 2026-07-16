@@ -3,7 +3,7 @@ package io.github.qishr.cascara.docs.examples.lang.yaml;
 import java.io.InputStream;
 
 import io.github.qishr.cascara.common.lang.annotation.Example;
-import io.github.qishr.cascara.common.lang.streaming.Event;
+import io.github.qishr.cascara.common.lang.streaming.StreamingEvent;
 import io.github.qishr.cascara.common.lang.streaming.StreamHandler;
 import io.github.qishr.cascara.lang.yaml.processor.YamlPushParser;
 
@@ -19,7 +19,7 @@ public class SimplePushParse implements StreamHandler {
     }
 
     @Override
-    public void onEvent(Event event) {
+    public void onEvent(StreamingEvent event) {
         if (event != null) {
             switch(event.getType()) {
                 case FIELD_NAME:

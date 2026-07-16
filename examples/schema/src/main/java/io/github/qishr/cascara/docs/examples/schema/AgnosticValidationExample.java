@@ -1,6 +1,7 @@
 package io.github.qishr.cascara.docs.examples.schema;
 
-import io.github.qishr.cascara.common.diagnostic.LocalizableException;
+import java.io.IOException;
+
 import io.github.qishr.cascara.common.diagnostic.LocalizableIOException;
 import io.github.qishr.cascara.common.diagnostic.SilentCollectingReporter;
 import io.github.qishr.cascara.common.io.IOUtils;
@@ -16,7 +17,7 @@ import io.github.qishr.cascara.schema.util.SchemaCompiler;
 import io.github.qishr.cascara.schema.util.SchemaValidator;
 
 public class AgnosticValidationExample {
-    public static void main(String args[]) throws LocalizableException {
+    public static void main(String args[]) throws IOException {
         // Tell IOUtils to use this class when reading resources
         IOUtils.setResourceProvider(UriScheme.RES, new ResResourceProvider(AgnosticValidationExample.class));
 
