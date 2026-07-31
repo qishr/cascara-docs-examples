@@ -58,7 +58,7 @@ public class AgnosticValidationExample {
 
         // Parse a valid file
         ResourceStream res = IOUtils.getResourceAsStream("res://valid.json");
-        AstParser<?,?> parser = new ProcessorFactory().createAstParser(res.contentType);
+        AstParser<?,?,?> parser = new ProcessorFactory().createAstParser(res.contentType);
         AstNode validData = parser.parse(res.stream);
 
         // Parse an invalid file
@@ -106,7 +106,7 @@ public class AgnosticValidationExample {
         }
 
         // Parse the schema
-        AstParser<?,?> parser = new ProcessorFactory().createAstParser(res.contentType);
+        AstParser<?,?,?> parser = new ProcessorFactory().createAstParser(res.contentType);
         AstNode schemaAst = parser.parse(res.stream);
 
         // Compile the schema
