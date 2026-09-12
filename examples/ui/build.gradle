@@ -11,13 +11,14 @@ repositories {
 
 
 dependencies {
-    implementation "io.github.qishr:cascara-common:1.1.11"
-    implementation "io.github.qishr:cascara-common-io:0.8.0"
-    implementation "io.github.qishr:cascara-lang-json:0.8.0"
-    implementation "io.github.qishr:cascara-lang-xml:0.8.0"
-    implementation "io.github.qishr:cascara-lang-yaml:0.8.0"
-    implementation "io.github.qishr:cascara-schema:0.8.0"
-    implementation "io.github.qishr:cascara-ui:0.8.0"
+    implementation "io.github.qishr:cascara-common:$common_version"
+    implementation "io.github.qishr:cascara-common-io:$io_version"
+    implementation "io.github.qishr:cascara-format-vsix:$vsix_version"
+    implementation "io.github.qishr:cascara-lang-json:$json_version"
+    implementation "io.github.qishr:cascara-lang-xml:$xml_version"
+    implementation "io.github.qishr:cascara-lang-yaml:$yaml_version"
+    implementation "io.github.qishr:cascara-schema:$schema_version"
+    implementation "io.github.qishr:cascara-ui:$ui_version"
 }
 
 

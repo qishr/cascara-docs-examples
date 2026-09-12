@@ -10,10 +10,10 @@ repositories {
 
 
 dependencies {
-    implementation "io.github.qishr:cascara-common:1.1.11"
-    implementation "io.github.qishr:cascara-lang-json:0.8.0"
-    implementation "io.github.qishr:cascara-lang-xml:0.8.0"
-    implementation "io.github.qishr:cascara-lang-yaml:0.8.0"
+    implementation "io.github.qishr:cascara-common:$common_version"
+    implementation "io.github.qishr:cascara-lang-json:$json_version"
+    implementation "io.github.qishr:cascara-lang-xml:$xml_version"
+    implementation "io.github.qishr:cascara-lang-yaml:$yaml_version"
 }
 
 
