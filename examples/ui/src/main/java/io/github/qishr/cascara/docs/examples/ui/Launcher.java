@@ -15,7 +15,7 @@ package io.github.qishr.cascara.docs.examples.ui;
 
 import java.io.InputStream;
 
-import io.github.qishr.cascara.common.io.filewatcher.FileWatcher;
+import io.github.qishr.cascara.common.filewatcher.FileWatcher;
 import io.github.qishr.cascara.common.annotation.Example;
 import io.github.qishr.cascara.ui.control.OptionChooser;
 import io.github.qishr.cascara.ui.language.Localization;
