@@ -103,10 +103,6 @@ public class Launcher extends Application {
 
     @Override
     public void stop() throws Exception {
-        // When the OptionProvider is used, the theme engine uses a
-        // background thread to watch the theme directory for updates.
-        // We close it here to allow the app to close cleanly.
-        FileWatcher.clearAll();
     }
 
     private void registerTranslations() {

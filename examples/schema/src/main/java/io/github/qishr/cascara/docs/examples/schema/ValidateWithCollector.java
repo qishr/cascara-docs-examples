@@ -16,7 +16,7 @@ package io.github.qishr.cascara.docs.examples.schema;
 import java.io.IOException;
 import java.io.InputStream;
 
-import io.github.qishr.cascara.common.diagnostic.SilentCollectingReporter;
+import io.github.qishr.cascara.common.diagnostic.report.SilentCollectingReporter;
 import io.github.qishr.cascara.common.io.IOUtils;
 import io.github.qishr.cascara.common.util.UriScheme;
 import io.github.qishr.cascara.common.io.provider.ResResourceProvider;

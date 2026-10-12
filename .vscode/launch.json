@@ -1,12 +1,15 @@
 {
     "configurations": [
+
         {
             "type": "java",
             "name": "SimpleAstParse (factory)",
             "request": "launch",
             "mainClass": "cascara.docs.examples.lang/io.github.qishr.cascara.docs.examples.lang.factory.SimpleAstParse",
             "projectName": "lang",
-            "modulePaths": ["${workspaceFolder}/examples/lang/build/modulepath"],
+            "modulePaths": [
+                "${workspaceFolder}/examples/lang/build/modulepath"
+            ],
             "classPaths": [],
             "preLaunchTask": "gradle build examples"
         },
@@ -16,7 +19,21 @@
             "request": "launch",
             "mainClass": "cascara.docs.examples.schema/io.github.qishr.cascara.docs.examples.schema.ValidateWithCollector",
             "projectName": "lang",
-            "modulePaths": ["${workspaceFolder}/examples/schema/build/modulepath"],
+            "modulePaths": [
+                "${workspaceFolder}/examples/schema/build/modulepath"
+            ],
+            "classPaths": [],
+            "preLaunchTask": "gradle build examples"
+        },
+        {
+            "type": "java",
+            "name": "Neo-Singleton",
+            "request": "launch",
+            "mainClass": "cascara.docs.examples.spl/io.github.qishr.cascara.docs.examples.spl.NeoSingleton",
+            "projectName": "spl",
+            "modulePaths": [
+                "${workspaceFolder}/examples/spl/build/modulepath"
+            ],
             "classPaths": [],
             "preLaunchTask": "gradle build examples"
         },
@@ -26,7 +43,9 @@
             "request": "launch",
             "mainClass": "cascara.docs.examples.ui/io.github.qishr.cascara.docs.examples.ui.Launcher",
             "projectName": "lang",
-            "modulePaths": ["${workspaceFolder}/examples/ui/build/modulepath"],
+            "modulePaths": [
+                "${workspaceFolder}/examples/ui/build/modulepath"
+            ],
             "classPaths": [],
             "preLaunchTask": "gradle build examples"
         }

@@ -19,8 +19,8 @@ import java.io.InputStream;
 import io.github.qishr.cascara.common.annotation.Example;
 import io.github.qishr.cascara.lang.json.ast.JsonNode;
 import io.github.qishr.cascara.lang.json.processor.JsonAstParser;
-import io.github.qishr.cascara.schema.Schema;
 import io.github.qishr.cascara.schema.diagnostic.ValidationException;
+import io.github.qishr.cascara.schema.util.Schema;
 import io.github.qishr.cascara.schema.util.SchemaCompiler;
 
 @Example

@@ -17,7 +17,7 @@ import java.io.InputStream;
 import java.util.List;
 
 import io.github.qishr.cascara.common.annotation.Example;
-import io.github.qishr.cascara.common.lang.util.ProcessorFactory;
+import io.github.qishr.cascara.common.lang.processor.ProcessorFactory;
 import io.github.qishr.cascara.common.lang.processor.Tokenizer;
 import io.github.qishr.cascara.common.lang.token.Token;
 

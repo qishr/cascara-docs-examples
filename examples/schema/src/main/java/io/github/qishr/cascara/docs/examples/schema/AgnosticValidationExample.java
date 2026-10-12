@@ -15,17 +15,17 @@ package io.github.qishr.cascara.docs.examples.schema;
 
 import java.io.IOException;
 
-import io.github.qishr.cascara.common.diagnostic.LocalizableIOException;
-import io.github.qishr.cascara.common.diagnostic.SilentCollectingReporter;
+import io.github.qishr.cascara.common.diagnostic.exception.LocalizableIOException;
+import io.github.qishr.cascara.common.diagnostic.report.SilentCollectingReporter;
 import io.github.qishr.cascara.common.io.IOUtils;
 import io.github.qishr.cascara.common.io.ResourceStream;
-import io.github.qishr.cascara.common.util.UriScheme;
 import io.github.qishr.cascara.common.io.provider.ResResourceProvider;
 import io.github.qishr.cascara.common.lang.ast.AstNode;
 import io.github.qishr.cascara.common.lang.processor.AstParser;
-import io.github.qishr.cascara.common.lang.util.ProcessorFactory;
-import io.github.qishr.cascara.schema.Schema;
+import io.github.qishr.cascara.common.lang.processor.ProcessorFactory;
+import io.github.qishr.cascara.common.util.UriScheme;
 import io.github.qishr.cascara.schema.diagnostic.ValidationException;
+import io.github.qishr.cascara.schema.util.Schema;
 import io.github.qishr.cascara.schema.util.SchemaCompiler;
 import io.github.qishr.cascara.schema.util.SchemaValidator;
 

@@ -14,7 +14,7 @@
 package io.github.qishr.cascara.docs.examples.lang.factory;
 
 import io.github.qishr.cascara.common.annotation.Example;
-import io.github.qishr.cascara.common.lang.util.ProcessorFactory;
+import io.github.qishr.cascara.common.lang.processor.ProcessorFactory;
 import io.github.qishr.cascara.common.lang.processor.Serializer;
 import io.github.qishr.cascara.docs.examples.lang.subject.Person;
 
